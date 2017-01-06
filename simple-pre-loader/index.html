@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html class="no-js">
+
+<head>
+    <meta charset='UTF-8'>
+    <title>Simple PreLoader</title>
+    <style>
+        body {
+            margin: 0;
+        }
+        
+        .no-js #loader {
+            display: none;
+        }
+        
+        .js #loader {
+            display: block;
+            position: absolute;
+            left: 100px;
+            top: 0;
+        }
+        
+        .se-pre-con {
+            position: fixed;
+            left: 0px;
+            top: 0px;
+            width: 100%;
+            height: 100%;
+            z-index: 9999;
+            background: url(images/Preloader_1.gif) center no-repeat #fff;
+        }
+    </style>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+    <script>
+        $(window).load(function () {
+            // Animate loader off screen
+            $(".se-pre-con").fadeOut("slow");;
+        });
+    </script>
+
+</head>
+
+<body>
+    <!-- Paste this code after body tag -->
+    <div class="se-pre-con"></div>
+    <!-- Ends -->
+    <div class="content">
+        <img src="http://greenmelocally.com/wp-content/uploads/2014/09/yellow_electric_car_charger.jpg" style="width:100%; height: auto;">
+    </div>
+</body>
+
+</html>
